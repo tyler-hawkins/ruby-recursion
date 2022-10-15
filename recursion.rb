@@ -9,7 +9,11 @@ def fibs(n)
 end
 
 def fibs_rec(n)
-
+	return [0, 1] if n <= 2
+	arr = fibs_rec(n - 1)
+	arr << arr [-1] + arr[-2]
+	arr
 end
 
 p fibs(8)
+p fibs_rec(8)
